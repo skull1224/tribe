@@ -46,6 +46,26 @@ VALID_SUFFIXES: dict[str, set[str]] = {
 }
 
 
+def _resolve_model_device(device: str) -> str:
+    if device != "auto":
+        return device
+    if torch.cuda.is_available():
+        return "cuda"
+    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
+def _resolve_extractor_device(device: str | None) -> str:
+    if device in (None, "auto"):
+        return "cuda" if torch.cuda.is_available() else "cpu"
+    if device not in {"cpu", "cuda"}:
+        raise ValueError(
+            "extractor_device must be one of: auto, cpu, cuda, or None"
+        )
+    return device
+
+
 def download_file(url: str, path: str | Path) -> Path:
     """Download a file from *url* and save it to *path*.
 
@@ -155,6 +175,7 @@ class TribeModel(TribeExperiment):
         cache_folder: str | Path = None,
         cluster: str = None,
         device: str = "auto",
+        extractor_device: str | None = None,
         config_update: dict | None = None,
     ) -> "TribeModel":
         """Load a trained model from a checkpoint directory or HuggingFace Hub repo.
@@ -177,7 +198,10 @@ class TribeModel(TribeExperiment):
             Cluster backend forwarded to feature-extractor infra
             (``"auto"`` by default).
         device:
-            Torch device string.  ``"auto"`` selects CUDA when available.
+            Torch device string.  ``"auto"`` selects CUDA, then MPS, then CPU.
+        extractor_device:
+            Device used by Hugging Face feature extractors.  ``"auto"`` selects
+            CUDA when available, otherwise CPU.
         config_update:
             Optional dictionary of config overrides applied after the
             YAML config is loaded.
@@ -189,8 +213,8 @@ class TribeModel(TribeExperiment):
         """
         if cache_folder is not None:
             Path(cache_folder).mkdir(parents=True, exist_ok=True)
-        if device == "auto":
-            device = "cuda" if torch.cuda.is_available() else "cpu"
+        device = _resolve_model_device(device)
+        extractor_device = _resolve_extractor_device(extractor_device)
         checkpoint_dir = Path(checkpoint_dir)
         if checkpoint_dir.exists():
             config_path = checkpoint_dir / "config.yaml"
@@ -206,6 +230,14 @@ class TribeModel(TribeExperiment):
         for modality in ["text", "audio", "video"]:
             config[f"data.{modality}_feature.infra.folder"] = cache_folder
             config[f"data.{modality}_feature.infra.cluster"] = cluster
+        for key in [
+            "data.text_feature.device",
+            "data.audio_feature.device",
+            "data.image_feature.image.device",
+            "data.video_feature.image.device",
+        ]:
+            if key in config:
+                config[key] = extractor_device
 
         for param in [
             "infra.workdir",
@@ -245,6 +277,7 @@ class TribeModel(TribeExperiment):
         text_path: str | None = None,
         audio_path: str | None = None,
         video_path: str | None = None,
+        include_text: bool = True,
     ) -> pd.DataFrame:
         """Build an events DataFrame from exactly one input source.
 
@@ -258,6 +291,9 @@ class TribeModel(TribeExperiment):
         video_path:
             Path to a video file (``.mp4``, ``.avi``, ``.mkv``, ``.mov``,
             ``.webm``).
+        include_text:
+            For audio/video inputs, set to ``False`` to skip transcription and
+            text events.  This avoids WhisperX and the gated Llama text model.
 
         Returns
         -------
@@ -317,7 +353,9 @@ class TribeModel(TribeExperiment):
             "timeline": "default",
             "subject": "default",
         }
-        return get_audio_and_text_events(pd.DataFrame([event]))
+        return get_audio_and_text_events(
+            pd.DataFrame([event]), audio_only=not include_text
+        )
 
     def predict(
         self, events: pd.DataFrame, verbose: bool = True

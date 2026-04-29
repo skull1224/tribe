@@ -6,8 +6,12 @@
 
 import contextlib
 import copy
+import importlib.util
 import logging
 import os
+import shutil
+import subprocess
+import sys
 import typing as tp
 import warnings
 from pathlib import Path
@@ -92,10 +96,37 @@ class ExtractWordsFromAudio(EventsTransform):
     overwrite: bool = False
 
     @staticmethod
+    def _whisperx_command() -> list[str]:
+        repo_root = Path(__file__).resolve().parents[1]
+        env_python = os.environ.get("TRIBEV2_WHISPERX_PYTHON")
+        if env_python:
+            return [env_python, "-m", "whisperx"]
+
+        local_python = repo_root / ".whisperx-venv" / "bin" / "python"
+        if local_python.exists():
+            return [str(local_python), "-m", "whisperx"]
+
+        if importlib.util.find_spec("whisperx") is not None:
+            return [sys.executable, "-m", "whisperx"]
+
+        whisperx_bin = shutil.which("whisperx")
+        if whisperx_bin:
+            return [whisperx_bin]
+
+        uvx_bin = shutil.which("uvx")
+        if uvx_bin:
+            return [uvx_bin, "whisperx"]
+
+        raise RuntimeError(
+            "WhisperX is required for text extraction from audio/video. "
+            "Create ./.whisperx-venv with scripts/setup_whisperx.sh or set "
+            "TRIBEV2_WHISPERX_PYTHON to a Python executable that has whisperx "
+            "installed."
+        )
+
+    @staticmethod
     def _get_transcript_from_audio(wav_filename: Path, language: str) -> pd.DataFrame:
         import json
-        import os
-        import subprocess
         import tempfile
 
         language_codes = dict(
@@ -105,13 +136,10 @@ class ExtractWordsFromAudio(EventsTransform):
             raise ValueError(f"Language {language} not supported")
 
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        compute_type = "float16"
+        compute_type = "float16" if device == "cuda" else "int8"
 
         with tempfile.TemporaryDirectory() as output_dir:
-            logger.info("Running whisperx via uvx...")
-            cmd = [
-                "uvx",
-                "whisperx",
+            cmd = ExtractWordsFromAudio._whisperx_command() + [
                 str(wav_filename),
                 "--model",
                 "large-v3",
@@ -131,6 +159,7 @@ class ExtractWordsFromAudio(EventsTransform):
                 "json",
             ]
             cmd = [c for c in cmd if c]  # remove empty args
+            logger.info("Running whisperx: %s", " ".join(cmd))
             env = {k: v for k, v in os.environ.items() if k != "MPLBACKEND"}
             result = subprocess.run(cmd, capture_output=True, text=True, env=env)
             if result.returncode != 0:

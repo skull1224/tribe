@@ -7,6 +7,7 @@ build/
 *.egg
 
 cache/
+outputs/
 *.data
 *.pkl
 
@@ -16,6 +17,7 @@ cache/
 # Environment / secrets
 .env
 .venv/
+.whisperx-venv/
 venv/
 env/
 
