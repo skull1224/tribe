@@ -1,0 +1,8 @@
+year,n_ads,ocr_brand_ads,strong_people_ads,face_closeup_ads,high_saturation_ads,mean_saturation,median_saturation,dominant_visual_mood,dominant_audio_mood
+2020,62,12,40,30,38,0.3064,0.2957,funny_playful,upbeat_audio
+2021,56,13,36,27,26,0.3061,0.2954,funny_playful,upbeat_audio
+2022,64,14,40,34,34,0.2904,0.2911,funny_playful,upbeat_audio
+2023,51,9,32,20,25,0.312,0.298,funny_playful,upbeat_audio
+2024,59,17,34,28,40,0.3388,0.3076,funny_playful,upbeat_audio
+2025,57,14,40,29,33,0.341,0.3308,funny_playful,upbeat_audio
+2026,53,10,34,32,32,0.326,0.326,funny_playful,upbeat_audio

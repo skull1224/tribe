@@ -1,0 +1,20 @@
+column,group,non_empty_ads,pct_of_ads,note
+advertiser,metadata,402,1.0,Ad identifier / source metadata
+audio_top_score_family,coarse_label,402,1.0,Dominant prompt-score family label
+face_closeup_peak_score,numeric_score,402,1.0,Peak CLIP face-closeup score
+face_closeup_peak_time,peak_timestamp,402,1.0,Peak timestamp for the corresponding score
+face_closeup_ranges_score_gt_0_00,timestamp_range,200,0.498,CLIP face-closeup windows
+high_saturation_ranges_gt_0_45,timestamp_range,228,0.567,High color-saturation windows
+ocr_brand_time_ranges,timestamp_range,89,0.221,OCR-readable advertiser/brand text windows
+people_peak_score,numeric_score,402,1.0,Peak CLIP people-presence score
+people_peak_time,peak_timestamp,402,1.0,Peak timestamp for the corresponding score
+people_strong_ranges_score_gt_0_055,timestamp_range,256,0.637,Strong CLIP people-presence windows
+people_time_ranges_score_gt_0_02,timestamp_range,398,0.99,Broad CLIP people-presence windows
+rank,metadata,402,1.0,Ad identifier / source metadata
+saturation_mean,numeric_score,402,1.0,Mean sampled-frame HSV saturation
+saturation_peak_score,numeric_score,402,1.0,Peak sampled-frame HSV saturation
+saturation_peak_time,peak_timestamp,402,1.0,Peak timestamp for the corresponding score
+source_key,metadata,402,1.0,Ad identifier / source metadata
+title,metadata,402,1.0,Ad identifier / source metadata
+visual_top_score_family,coarse_label,402,1.0,Dominant prompt-score family label
+year,metadata,402,1.0,Ad identifier / source metadata

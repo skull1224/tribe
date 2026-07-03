@@ -9,6 +9,9 @@ The goal is not to replace TRIBE. These features are intended as readable baseli
 | File | Description |
 |---|---|
 | `video_timeline_summary.csv` | One row per ad. Includes timestamp ranges for OCR brand text, people/face cues, high-saturation windows, and dominant CLIP/CLAP mood families. |
+| `csv_overview.md` | CSV shape, column groups, year-level counts, feature coverage, and mood distributions. |
+| `csv_by_year_summary.csv` | One row per year with cue counts and saturation/mood summary. |
+| `csv_feature_coverage.csv` | One row per CSV column with non-empty counts and interpretation notes. |
 | `examples.md` | Human-readable example rows from the summary table. |
 | `data_dictionary.md` | Column definitions and interpretation cautions. |
 | `methodology.md` | Extraction pipeline and prompt-score definitions. |
