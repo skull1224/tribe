@@ -1,0 +1,72 @@
+feature_group,feature_set,n_features
+Baseline control,Duration only,1
+Baseline control,Low-level video sensory,13
+Baseline control,Low-level audio sensory,5
+Baseline control,Low-level sensory all,20
+Baseline modality,CLIP visual embedding,512
+Baseline modality,CLAP audio embedding,512
+Baseline modality,ASR text embedding/meta,518
+Baseline modality,ACR content tags,44
+Baseline cue,OCR timing,13
+Baseline cue,CLIP content timing all,48
+TRIBE set,TRIBE 3ROI abs,21
+TRIBE set,TRIBE 5ROI abs,35
+TRIBE set,TRIBE 5ROI signed,35
+TRIBE set,TRIBE all available ROI abs,77
+Combined,CLIP + TRIBE 5ROI,547
+Combined,CLAP + TRIBE 5ROI,547
+Combined,ASR + TRIBE 5ROI,553
+Combined,ACR + TRIBE 5ROI,79
+Combined,OCR + TRIBE 5ROI,48
+Combined,Content timing + TRIBE 5ROI,83
+Combined,CLIP+CLAP+ASR+ACR,1586
+Combined,CLIP+CLAP+ASR+ACR+TRIBE,1621
+Combined,All non-TRIBE baselines,1667
+Combined,All non-TRIBE baselines + TRIBE,1702
+TRIBE ROI,TRIBE ROI dlPFC,7
+TRIBE ROI,TRIBE ROI Amygdala,7
+TRIBE ROI,TRIBE ROI vmPFC,7
+TRIBE ROI,TRIBE ROI Hippocampus,7
+TRIBE ROI,TRIBE ROI Ventral striatum,7
+TRIBE time window,TRIBE window Whole,5
+TRIBE time window,TRIBE window 25-75%,5
+TRIBE time window,TRIBE window 50-100%,5
+TRIBE time window,TRIBE window Last 5s,5
+TRIBE time window,TRIBE window Temporal SD,5
+TRIBE time window,TRIBE window Peak 10s,5
+TRIBE time window,TRIBE window Abs peak 10s,5
+TRIBE ROI-window cell,dlPFC Whole,1
+TRIBE ROI-window cell,dlPFC 25-75%,1
+TRIBE ROI-window cell,dlPFC 50-100%,1
+TRIBE ROI-window cell,dlPFC Last 5s,1
+TRIBE ROI-window cell,dlPFC Temporal SD,1
+TRIBE ROI-window cell,dlPFC Peak 10s,1
+TRIBE ROI-window cell,dlPFC Abs peak 10s,1
+TRIBE ROI-window cell,Amygdala Whole,1
+TRIBE ROI-window cell,Amygdala 25-75%,1
+TRIBE ROI-window cell,Amygdala 50-100%,1
+TRIBE ROI-window cell,Amygdala Last 5s,1
+TRIBE ROI-window cell,Amygdala Temporal SD,1
+TRIBE ROI-window cell,Amygdala Peak 10s,1
+TRIBE ROI-window cell,Amygdala Abs peak 10s,1
+TRIBE ROI-window cell,vmPFC Whole,1
+TRIBE ROI-window cell,vmPFC 25-75%,1
+TRIBE ROI-window cell,vmPFC 50-100%,1
+TRIBE ROI-window cell,vmPFC Last 5s,1
+TRIBE ROI-window cell,vmPFC Temporal SD,1
+TRIBE ROI-window cell,vmPFC Peak 10s,1
+TRIBE ROI-window cell,vmPFC Abs peak 10s,1
+TRIBE ROI-window cell,Hippocampus Whole,1
+TRIBE ROI-window cell,Hippocampus 25-75%,1
+TRIBE ROI-window cell,Hippocampus 50-100%,1
+TRIBE ROI-window cell,Hippocampus Last 5s,1
+TRIBE ROI-window cell,Hippocampus Temporal SD,1
+TRIBE ROI-window cell,Hippocampus Peak 10s,1
+TRIBE ROI-window cell,Hippocampus Abs peak 10s,1
+TRIBE ROI-window cell,Ventral striatum Whole,1
+TRIBE ROI-window cell,Ventral striatum 25-75%,1
+TRIBE ROI-window cell,Ventral striatum 50-100%,1
+TRIBE ROI-window cell,Ventral striatum Last 5s,1
+TRIBE ROI-window cell,Ventral striatum Temporal SD,1
+TRIBE ROI-window cell,Ventral striatum Peak 10s,1
+TRIBE ROI-window cell,Ventral striatum Abs peak 10s,1

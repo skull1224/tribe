@@ -1,0 +1,71 @@
+cue,cue_col,group,group_flag,roi,n,mean_abs_activation,sem
+OCR brand text,ocr_brand_present,No brand text,0,dlPFC,308,0.07013471884884714,0.001747020322962088
+OCR brand text,ocr_brand_present,Brand text present,1,dlPFC,88,0.0624289094262972,0.002848602217209285
+OCR brand text,ocr_brand_present,No brand text,0,Amygdala,308,0.05022785472476445,0.0011003015681451229
+OCR brand text,ocr_brand_present,Brand text present,1,Amygdala,88,0.057699693732596494,0.002528384726888273
+OCR brand text,ocr_brand_present,No brand text,0,vmPFC,308,0.03432744274676935,0.0009333948976442686
+OCR brand text,ocr_brand_present,Brand text present,1,vmPFC,88,0.032775648203379186,0.001514573634530818
+OCR brand text,ocr_brand_present,No brand text,0,Hippocampus,308,0.044760452493467426,0.000847360045983079
+OCR brand text,ocr_brand_present,Brand text present,1,Hippocampus,88,0.04489738283687956,0.001313587887071686
+OCR brand text,ocr_brand_present,No brand text,0,Ventral striatum,308,0.055209865634116985,0.000910826784683648
+OCR brand text,ocr_brand_present,Brand text present,1,Ventral striatum,88,0.050459538574039,0.0016139952550458532
+Strong people,strong_people_present,Absent/weak,0,dlPFC,143,0.06965644146163175,0.0024554368224992853
+Strong people,strong_people_present,Strong people present,1,dlPFC,253,0.06772476800769066,0.001907633743579133
+Strong people,strong_people_present,Absent/weak,0,Amygdala,143,0.05425555017368479,0.0015970975422936022
+Strong people,strong_people_present,Strong people present,1,Amygdala,253,0.05055023173462063,0.0013383007663641405
+Strong people,strong_people_present,Absent/weak,0,vmPFC,143,0.03426036094376471,0.0013453265518976682
+Strong people,strong_people_present,Strong people present,1,vmPFC,253,0.03382560392467974,0.000996713743706389
+Strong people,strong_people_present,Absent/weak,0,Hippocampus,143,0.04304684553184362,0.0010291250193217544
+Strong people,strong_people_present,Strong people present,1,Hippocampus,253,0.04577664089557207,0.0009613097513533245
+Strong people,strong_people_present,Absent/weak,0,Ventral striatum,143,0.052569246374942015,0.0013209002215276429
+Strong people,strong_people_present,Strong people present,1,Ventral striatum,253,0.05505010189014529,0.0010014470430006865
+Face close-up,face_closeup_present,Absent,0,dlPFC,200,0.06789258803872633,0.002291125998165266
+Face close-up,face_closeup_present,Face close-up present,1,dlPFC,196,0.06896285626129496,0.0019527897277492438
+Face close-up,face_closeup_present,Absent,0,Amygdala,200,0.04938465744295323,0.0012056867835357442
+Face close-up,face_closeup_present,Face close-up present,1,Amygdala,196,0.054442963342373966,0.0016720224532777513
+Face close-up,face_closeup_present,Absent,0,vmPFC,200,0.033570133718653056,0.0011724292600312097
+Face close-up,face_closeup_present,Face close-up present,1,vmPFC,196,0.03440348298046794,0.0010890417812805904
+Face close-up,face_closeup_present,Absent,0,Hippocampus,200,0.0431386735170256,0.001013829072279991
+Face close-up,face_closeup_present,Face close-up present,1,Hippocampus,196,0.046476807929735985,0.0010113608565134949
+Face close-up,face_closeup_present,Absent,0,Ventral striatum,200,0.053065736465753084,0.001176479480249318
+Face close-up,face_closeup_present,Face close-up present,1,Ventral striatum,196,0.055264952636085975,0.001077410481648582
+Mean saturation,high_saturation_mean_median_split,Low mean saturation,0,dlPFC,196,0.07005605214721353,0.0022373621551957028
+Mean saturation,high_saturation_mean_median_split,High mean saturation,1,dlPFC,200,0.06682125607052612,0.0020201526051497366
+Mean saturation,high_saturation_mean_median_split,Low mean saturation,0,Amygdala,196,0.05236663673508816,0.0015379699761090288
+Mean saturation,high_saturation_mean_median_split,High mean saturation,1,Amygdala,200,0.05141945751809332,0.0013886368648237163
+Mean saturation,high_saturation_mean_median_split,Low mean saturation,0,vmPFC,196,0.0352848719747124,0.0012296678740725097
+Mean saturation,high_saturation_mean_median_split,High mean saturation,1,vmPFC,200,0.03270637250429347,0.001023061416577267
+Mean saturation,high_saturation_mean_median_split,Low mean saturation,0,Hippocampus,196,0.044611659567812344,0.0010461362851117144
+Mean saturation,high_saturation_mean_median_split,High mean saturation,1,Hippocampus,200,0.044966518911710746,0.000993247864761659
+Mean saturation,high_saturation_mean_median_split,Low mean saturation,0,Ventral striatum,196,0.05543430467476421,0.0011639810514782417
+Mean saturation,high_saturation_mean_median_split,High mean saturation,1,Ventral striatum,200,0.05289977146784842,0.0010926209496786728
+High saturation window,high_saturation_present,No high-saturation window,0,dlPFC,172,0.06689131044748621,0.0022444800527649765
+High saturation window,high_saturation_present,High-saturation window,1,dlPFC,224,0.06959791088389039,0.0020302616019722327
+High saturation window,high_saturation_present,No high-saturation window,0,Amygdala,172,0.04964790207991831,0.0016366209754544781
+High saturation window,high_saturation_present,High-saturation window,1,Amygdala,224,0.0536085408301339,0.0013192106887988187
+High saturation window,high_saturation_present,No high-saturation window,0,vmPFC,172,0.03314331572552719,0.001260267093057834
+High saturation window,high_saturation_present,High-saturation window,1,vmPFC,224,0.03462704956746272,0.0010317891687470864
+High saturation window,high_saturation_present,No high-saturation window,0,Hippocampus,172,0.04396966022436976,0.0011044507084553101
+High saturation window,high_saturation_present,High-saturation window,1,Hippocampus,224,0.045421462049293634,0.000949377956659639
+High saturation window,high_saturation_present,No high-saturation window,0,Ventral striatum,172,0.05539597645732511,0.001236883379459352
+High saturation window,high_saturation_present,High-saturation window,1,Ventral striatum,224,0.05320075919269441,0.001044212951103101
+Non-upbeat audio,non_upbeat_audio,Upbeat,0,dlPFC,360,0.0697067632362414,0.0015862178094695038
+Non-upbeat audio,non_upbeat_audio,Non-upbeat,1,dlPFC,36,0.055577851942004784,0.004278893939292786
+Non-upbeat audio,non_upbeat_audio,Upbeat,0,Amygdala,360,0.051175395177911615,0.0010679709623430324
+Non-upbeat audio,non_upbeat_audio,Non-upbeat,1,Amygdala,36,0.05901694554577112,0.0037607784643845983
+Non-upbeat audio,non_upbeat_audio,Upbeat,0,vmPFC,360,0.03403911760759578,0.0008406847409319116
+Non-upbeat audio,non_upbeat_audio,Non-upbeat,1,vmPFC,36,0.03341741858799575,0.002635787565889941
+Non-upbeat audio,non_upbeat_audio,Upbeat,0,Hippocampus,360,0.04482678831959569,0.0007538642067821383
+Non-upbeat audio,non_upbeat_audio,Non-upbeat,1,Hippocampus,36,0.044431812849414526,0.002464215380143533
+Non-upbeat audio,non_upbeat_audio,Upbeat,0,Ventral striatum,360,0.05446119356125006,0.0008434863522105926
+Non-upbeat audio,non_upbeat_audio,Non-upbeat,1,Ventral striatum,36,0.051084675771484615,0.0024574137073241392
+Non-funny visual,non_funny_visual,Funny/playful,0,dlPFC,361,0.06911021815068706,0.001579026260783787
+Non-funny visual,non_funny_visual,Non-funny,1,dlPFC,35,0.061327105216030034,0.004920918611989061
+Non-funny visual,non_funny_visual,Funny/playful,0,Amygdala,361,0.05103636733938868,0.0010654214078234924
+Non-funny visual,non_funny_visual,Non-funny,1,Amygdala,35,0.06067496269076079,0.0037522680490835987
+Non-funny visual,non_funny_visual,Funny/playful,0,vmPFC,361,0.03380806204820209,0.0008357588960445633
+Non-funny visual,non_funny_visual,Non-funny,1,vmPFC,35,0.035782828814324937,0.0027814290179317656
+Non-funny visual,non_funny_visual,Funny/playful,0,Hippocampus,361,0.045273808072008655,0.0007651845392578243
+Non-funny visual,non_funny_visual,Non-funny,1,Hippocampus,35,0.039809838389664155,0.0018470309087905811
+Non-funny visual,non_funny_visual,Funny/playful,0,Ventral striatum,361,0.05446545921819578,0.00084507306594952
+Non-funny visual,non_funny_visual,Non-funny,1,Ventral striatum,35,0.05094420663013691,0.002377421789374638
