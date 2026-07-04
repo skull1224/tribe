@@ -1,0 +1,29 @@
+task,cv,cue_col,cue_label,model_label,adds_tribe,n,n_bottom,n_top,n_features,pca_k,auc,accuracy,balanced_accuracy
+topbottom25_logistic,10fold,ocr_brand_present,OCR brand text,OCR brand text baseline,false,210,108,102,1,0,0.4783950617283951,0.5523809523809524,0.559640522875817
+topbottom25_logistic,10fold,ocr_brand_present,OCR brand text,OCR brand text + TRIBE 5ROI abs,true,210,108,102,36,0,0.7386528685548294,0.680952380952381,0.6811002178649237
+topbottom25_logistic,10fold,strong_people_present,Strong people,Strong people baseline,false,210,108,102,1,0,0.43809005083514885,0.46190476190476193,0.45479302832244006
+topbottom25_logistic,10fold,strong_people_present,Strong people,Strong people + TRIBE 5ROI abs,true,210,108,102,36,0,0.7421023965141611,0.680952380952381,0.6805555555555556
+topbottom25_logistic,10fold,face_closeup_present,Face close-up,Face close-up baseline,false,210,108,102,1,0,0.43087327523602037,0.4714285714285714,0.46568627450980393
+topbottom25_logistic,10fold,face_closeup_present,Face close-up,Face close-up + TRIBE 5ROI abs,true,210,108,102,36,0,0.7453703703703703,0.7,0.6996187363834423
+topbottom25_logistic,10fold,saturation_mean,Mean saturation,Mean saturation baseline,false,210,108,102,1,0,0.5513798111837327,0.5523809523809524,0.5514705882352942
+topbottom25_logistic,10fold,saturation_mean,Mean saturation,Mean saturation + TRIBE 5ROI abs,true,210,108,102,36,0,0.7428286129266521,0.7,0.6998910675381264
+topbottom25_logistic,10fold,high_saturation_present,High saturation window,High saturation window baseline,false,210,108,102,1,0,0.46604938271604934,0.5571428571428572,0.5561002178649237
+topbottom25_logistic,10fold,high_saturation_present,High saturation window,High saturation window + TRIBE 5ROI abs,true,210,108,102,36,0,0.7483660130718954,0.7047619047619048,0.7050653594771241
+topbottom25_logistic,10fold,non_upbeat_audio,Non-upbeat audio,Non-upbeat audio baseline,false,210,108,102,1,0,0.46123819898329704,0.4714285714285714,0.47576252723311546
+topbottom25_logistic,10fold,non_upbeat_audio,Non-upbeat audio,Non-upbeat audio + TRIBE 5ROI abs,true,210,108,102,36,0,0.757716049382716,0.6857142857142857,0.6849128540305011
+topbottom25_logistic,10fold,non_funny_visual,Non-funny visual,Non-funny visual baseline,false,210,108,102,1,0,0.43795388525780676,0.44285714285714284,0.4417211328976035
+topbottom25_logistic,10fold,non_funny_visual,Non-funny visual,Non-funny visual + TRIBE 5ROI abs,true,210,108,102,36,0,0.7477305737109659,0.7047619047619048,0.7042483660130718
+topbottom25_logistic,loo,ocr_brand_present,OCR brand text,OCR brand text baseline,false,210,108,102,1,0,0.24863834422657954,0.5523809523809524,0.559640522875817
+topbottom25_logistic,loo,ocr_brand_present,OCR brand text,OCR brand text + TRIBE 5ROI abs,true,210,108,102,36,0,0.7322076978939724,0.6857142857142857,0.6854575163398693
+topbottom25_logistic,loo,strong_people_present,Strong people,Strong people baseline,false,210,108,102,1,0,0.2516339869281046,0.5142857142857142,0.5
+topbottom25_logistic,loo,strong_people_present,Strong people,Strong people + TRIBE 5ROI abs,true,210,108,102,36,0,0.7312999273783587,0.6857142857142857,0.6854575163398693
+topbottom25_logistic,loo,face_closeup_present,Face close-up,Face close-up baseline,false,210,108,102,1,0,0.26942628903413224,0.26666666666666666,0.25925925925925924
+topbottom25_logistic,loo,face_closeup_present,Face close-up,Face close-up + TRIBE 5ROI abs,true,210,108,102,36,0,0.7324800290486565,0.6857142857142857,0.6854575163398693
+topbottom25_logistic,loo,saturation_mean,Mean saturation,Mean saturation baseline,false,210,108,102,1,0,0.5531045751633987,0.5476190476190477,0.5465686274509804
+topbottom25_logistic,loo,saturation_mean,Mean saturation,Mean saturation + TRIBE 5ROI abs,true,210,108,102,36,0,0.7364742193173566,0.680952380952381,0.6808278867102397
+topbottom25_logistic,loo,high_saturation_present,High saturation window,High saturation window baseline,false,210,108,102,1,0,0.3079157588961511,0.5571428571428572,0.5561002178649237
+topbottom25_logistic,loo,high_saturation_present,High saturation window,High saturation window + TRIBE 5ROI abs,true,210,108,102,36,0,0.7388344226579521,0.6952380952380952,0.6952614379084967
+topbottom25_logistic,loo,non_upbeat_audio,Non-upbeat audio,Non-upbeat audio baseline,false,210,108,102,1,0,0.10784313725490201,0.5285714285714286,0.5408496732026143
+topbottom25_logistic,loo,non_upbeat_audio,Non-upbeat audio,Non-upbeat audio + TRIBE 5ROI abs,true,210,108,102,36,0,0.7500907770515615,0.6904761904761905,0.6898148148148148
+topbottom25_logistic,loo,non_funny_visual,Non-funny visual,Non-funny visual baseline,false,210,108,102,1,0,0.09685911401597677,0.05238095238095238,0.05092592592592592
+topbottom25_logistic,loo,non_funny_visual,Non-funny visual,Non-funny visual + TRIBE 5ROI abs,true,210,108,102,36,0,0.7333877995642701,0.6857142857142857,0.6854575163398693
